@@ -18,7 +18,7 @@ pipeline
 								sh 'rm -rf *.xml'
 								sh 'cd /var/jenkins_home/jobs/${JOB_NAME##*/}/workspace/'
 								sh 'chmod 777 -R *'
-								sh './gradlew build test run'	
+								sh './gradlew clean build test run'	
 																
                                 
 			}
