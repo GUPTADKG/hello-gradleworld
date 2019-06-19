@@ -14,8 +14,6 @@ pipeline
 								
                                 echo 'Build Web app Java with Gradle'
                                
-								sh 'cd build/test-results/'
-								sh 'rm -rf *.xml'
 								sh 'cd /var/jenkins_home/jobs/${JOB_NAME##*/}/workspace/'
 								sh 'chmod 777 -R *'
 								sh './gradlew clean build test run'	
