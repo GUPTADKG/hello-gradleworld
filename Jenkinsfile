@@ -14,9 +14,9 @@ pipeline
 								
                                 echo 'Build Web app Java with Gradle'
                                
-								sh 'cd /var/jenkins_home/jobs/${JOB_NAME##*/}/workspace/'
-								sh 'chmod 777 -R */*'
-	
+								sh 'cd /var/jenkins_home/jobs/${JOB_NAME##*/}/'
+								sh 'chmod 777 -R workspace/'
+								sh 'cd workspace/'
 								sh './gradlew build run'
 																
                                 
