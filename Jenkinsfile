@@ -44,7 +44,7 @@ pipeline
 				}
 				stage('DockerImageRun1') {
                         steps {
-								sh 'docker run -rm -d -p 8087:8080 hello-worldgradle:latest'
+								sh 'docker run --rm -d -p 8087:8080 hello-worldgradle:latest'
 							}
 
                 }
