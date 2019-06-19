@@ -56,7 +56,7 @@ pipeline
 					always{
 								sh 'cd build/test-results/'
 								sh 'touch *.xml'
-								junit 'build/test-results/*.html'
+								junit 'build/test-results/*.xml'
 
 							}
 					}
