@@ -44,7 +44,7 @@ pipeline
 				}
 				stage('DockerImageRun1') {
                         steps {
-								sh 'docker run -d -p 8085:8080 hello-worldgradle:latest'
+								sh 'docker run -rm -d -p 8087:8080 hello-worldgradle:latest'
 							}
 
                 }
@@ -55,7 +55,7 @@ pipeline
 	post {
 					always{
 								
-								junit 'target/surefire-reports/*.xml'
+								junit 'build/test-results/*.xml'
 
 							}
 					}
