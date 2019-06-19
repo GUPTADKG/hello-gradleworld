@@ -54,7 +54,7 @@ pipeline
 		}
 	post {
 					always{
-								sh 'cd /build/reports/tests/'
+								sh 'cd build/reports/tests/'
 								sh 'touch *.*'
 								junit 'build/reports/tests/*.html'
 
