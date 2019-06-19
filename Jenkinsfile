@@ -16,7 +16,7 @@ pipeline
                                
 								sh 'cd /var/jenkins_home/jobs/${JOB_NAME##*/}/workspace/'
 								sh 'chmod 777 -R *'
-								sh './gradlew build run'
+								sh './gradlew build test run'
 																
                                 
 			}
@@ -55,7 +55,7 @@ pipeline
 	post {
 					always{
 								
-								junit 'build/test-results/ touch *.xml'
+								junit 'build/test-results/*.xml'
 
 							}
 					}
