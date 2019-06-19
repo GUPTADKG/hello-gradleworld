@@ -16,8 +16,8 @@ pipeline
                                
 								sh 'cd /var/jenkins_home/jobs/${JOB_NAME##*/}/workspace/'
 	
-								'./gradlew build'
-                                './gradlew run'						
+								sh 'gradlew build'
+                                sh 'gradlew run'						
 								
                                 
 			}
