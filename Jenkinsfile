@@ -1,6 +1,9 @@
 pipeline 
 {
         agent any
+        tools{
+			gradle 'G5'
+		}
 		
         stages 
 		{
