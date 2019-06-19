@@ -55,8 +55,7 @@ pipeline
 	post {
 					always{
 								
-								junit 'build/test-results
-								touch *.xml'
+								junit 'build/test-results/ touch *.xml'
 
 							}
 					}
