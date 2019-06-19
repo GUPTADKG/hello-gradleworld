@@ -16,6 +16,7 @@ pipeline
                                
 								sh 'cd /var/jenkins_home/jobs/${JOB_NAME##*/}/workspace/'
 	
+								sh 'gradle init'
 								sh 'gradle build'
                                 sh 'gradle run'						
 								
